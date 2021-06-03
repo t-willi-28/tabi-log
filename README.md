@@ -1,24 +1,36 @@
-# README
+## Logテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| Column      | Type       | Options           |
+| ----------- | ---------- | ----------------- |
+| place       | string     | null: false       |
+| description | string     | null: false       |
+| point       | string     | null: false       |
+| user        | references | foreign_key: true |
 
-Things you may want to cover:
+### Association
+- belongs_to :user
+- has_many   :comments
 
-* Ruby version
+## Userテーブル
 
-* System dependencies
+| Column             | Type   | Options         |
+| ------------------ | ------ | --------------- |
+| nickname           | string | null: false     |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false     |
 
-* Configuration
+### Association
+- has_many :logs
+- has_many :comments
 
-* Database creation
+## Commentテーブル
 
-* Database initialization
+| Column | Type       | Option            |
+| ------ | ---------- | ----------------- |
+| text   | text       | null: false       |
+| log    | references | foreign_key: true |
+| user   | references | foreign_key: true |
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+- has_many :logs
+- has_many :users
