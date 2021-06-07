@@ -1,0 +1,35 @@
+<%= render "shared/header" %>
+<div class='main'>
+  <div class='log-contents'>
+    <h2 class='title'>投稿一覧</h2>
+    <ul class='log-lists'>
+      <% if @log[0] != nil %>
+      <% @log.each do |log| %>
+      <li class='list'>
+        <%= link_to "#" do %>
+        <%= image_tag log.image, class: "log-img"%>
+        <div class="log-info">
+        <h3 class='log-place'>
+          <%= log.place%>
+        </h3>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+
+      <% else %>
+      <li class='list'>
+        <%= link_to '#' do %>
+        <%= image_tag 'sample.jpg', size: '300x300', class: "log-img" %>
+        <div class="log-info">
+        <h3 class='log-place'>
+          <%= "新規投稿してください！" %>
+        </h3>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<%= render "shared/footer"%>
