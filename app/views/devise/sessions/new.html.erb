@@ -1,0 +1,23 @@
+<%= render "shared/header"%>
+<div class="registration-main">
+  <div class='box'>
+    <div class='box-inner'>
+      <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'log-in-form', local: true do |f| %>
+        <div class='field'>
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %>
+        </div>
+
+        <div class='field'>
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "off"%>
+        </div>
+
+        <div class="submit-btn">
+          <%= f.submit "ログイン" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render "shared/footer"%>
