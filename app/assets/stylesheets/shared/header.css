@@ -1,0 +1,60 @@
+.page-header {
+  background-color: lightseagreen;
+  height: 15vh;
+  width: 100%;
+  display: flex;
+}
+
+.left-header {
+  height: 15vh;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-icon {
+  color: white;
+  font-size: 70px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.right-header {
+  height: 15vh;
+  width: 30vw;
+}
+
+.list-right {
+  height: 15vh;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.user-nickname {
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+  margin-right: 3vw;
+  font-weight: bold;
+}
+
+.logout {
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+}
+
+.login {
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+  margin-right: 3vw;
+}
+
+.sign-up {
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+}
