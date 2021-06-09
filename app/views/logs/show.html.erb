@@ -22,8 +22,29 @@
         <%= @log.point %>
       </div>
       <div class ="log-manage">
-        <%= link_to "投稿を削除する", log_path, method: :delete, class: :log_btn %>
+        <%= link_to "投稿を削除する", log_path(@log), method: :delete, class: :log_btn %>
       </div>
+    </div>
+    <div class="log-comments">
+      <% if user_signed_in? %>
+        <%= form_with model: [@log, @comment], local: true do |f| %>
+          <div class="comment-field">
+            <%= f.label :text, "コメント" %><br />
+            <%= f.text_field :text, id:"comment_text" %>
+          </div>
+          <div class="actions">
+            <%= f.submit "コメントする", class: :form__btn%>
+          </div>
+        <% end %>
+      <% end %>
+      <ul class="comments-lists">
+        <% @comments.each do |comment| %>
+          <li class ="comments_list">
+            <%= comment.user.nickname %>
+            <%= comment.text %>
+          </li>
+        <% end %>
+      </ul>
     </div>
   </div>
 <%= render "shared/footer"%>
