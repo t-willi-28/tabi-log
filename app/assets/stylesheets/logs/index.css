@@ -1,15 +1,21 @@
 .main {
   background-color: whitesmoke;
-  height: calc(100vh - 15vh - 7vh);
   width: 100vw;
 }
 
 .log-contents {
   text-align: center;
+
 }
 
 .title {
   font-size: 40px;
+}
+
+.log-lists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .log-place {
