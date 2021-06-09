@@ -1,0 +1,29 @@
+<%= render "shared/header"%>
+  <div class="show-log">
+    <div class="show-box">
+      <div class= "show-log-place">
+        <p class ="detail-log">場所</p>
+        <h2 class="show-place">
+          <%= @log.place %>
+        </h2>
+      </div>
+      <div class="user-name">
+        <%= @log.user.nickname %>
+      </div>
+      <div class= "show-log-img">
+        <%= image_tag @log.image, size: '500x450', class:"log-box-img" %>
+      </div>
+      <p class ="detail-log">場所の説明</p>
+      <div class ="log-description">
+        <%= @log.description%>
+      </div>
+      <p class ="detail-log">オススメのポイント</p>
+      <div class ="log-point">
+        <%= @log.point %>
+      </div>
+      <div class ="log-manage">
+        <%= link_to "投稿を削除する", log_path, method: :delete, class: :log_btn %>
+      </div>
+    </div>
+  </div>
+<%= render "shared/footer"%>

@@ -1,0 +1,37 @@
+.show-log {
+  background-color: whitesmoke;
+  padding: 50px 250px;
+}
+
+.show-box {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.detail-log {
+  font-weight: bold;
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+
+.show-place {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.log-description {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.log-point {
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.log_btn {
+  text-decoration: none;
+  border: 1px solid black;
+  color: red;
+  padding: 5px;
+}

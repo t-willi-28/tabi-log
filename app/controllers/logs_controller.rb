@@ -16,6 +16,16 @@ class LogsController < ApplicationController
     end
   end
 
+  def show
+    @log = Log.find(params[:id])
+  end
+
+  def destroy
+    log = Log.find(params[:id])
+    log.destroy
+    redirect_to root_path
+  end
+
   private
   def log_params
     params.require(:log).permit(:place, :description, :point, :image).merge(user_id: current_user.id)
