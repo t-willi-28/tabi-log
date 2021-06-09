@@ -35,3 +35,7 @@
   color: red;
   padding: 5px;
 }
+
+.comments-lists {
+  text-decoration: none;
+}

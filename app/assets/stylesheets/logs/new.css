@@ -25,3 +25,7 @@
 .actions {
   margin-bottom: 40px;
 }
+
+.form__btn {
+  color: red;
+}

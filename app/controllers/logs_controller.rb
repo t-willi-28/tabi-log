@@ -18,6 +18,8 @@ class LogsController < ApplicationController
 
   def show
     @log = Log.find(params[:id])
+    @comment = Comment.new
+    @comments = @log.comments.includes(:user)
   end
 
   def destroy
