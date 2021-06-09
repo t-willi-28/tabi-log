@@ -1,0 +1,27 @@
+.new_main {
+  background-color: whitesmoke;
+  height: calc(100vh - 15vh - 7vh);
+  width: 100vw;
+}
+
+.new_inner {
+  text-align: center;
+}
+
+.new_log_post {
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+
+.field {
+  margin: 10px, 0;
+}
+
+.form_text {
+  width: 50%;
+}
+
+.actions {
+  margin-bottom: 40px;
+}
