@@ -21,9 +21,11 @@
       <div class ="log-point">
         <%= @log.point %>
       </div>
+      <% if user_signed_in? && current_user.id == @log.user_id %>
       <div class ="log-manage">
         <%= link_to "投稿を削除する", log_path(@log), method: :delete, class: :log_btn %>
       </div>
+      <% end %>
     </div>
     <div class="log-comments">
       <% if user_signed_in? %>

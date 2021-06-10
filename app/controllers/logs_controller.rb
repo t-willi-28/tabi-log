@@ -1,4 +1,7 @@
 class LogsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :move_to_index, only: [:destroy]
+
   def index
     @log = Log.all
   end
@@ -31,5 +34,9 @@ class LogsController < ApplicationController
   private
   def log_params
     params.require(:log).permit(:place, :description, :point, :image).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    redirect_to root_path if current_user.id != @log.user_id
   end
 end
